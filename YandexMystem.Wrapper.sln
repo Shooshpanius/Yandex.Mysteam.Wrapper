@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YandexMystem.Wrapper", "YandexMystem.Wrapper\YandexMystem.Wrapper.csproj", "{6552BA1D-5695-4178-A4FC-89ABBC7B585C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YandexMystem.Wrapper.Tests", "YandexMystem.Wrapper.Tests\YandexMystem.Wrapper.Tests.csproj", "{7DD8F79B-1D10-4B54-A6E5-118D1ADC6FD5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "res", "res", "{EA44D83D-C320-4919-97C7-6AA7C78C3A84}"
+	ProjectSection(SolutionItems) = preProject
+		res\mystem.exe = res\mystem.exe
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6552BA1D-5695-4178-A4FC-89ABBC7B585C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6552BA1D-5695-4178-A4FC-89ABBC7B585C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6552BA1D-5695-4178-A4FC-89ABBC7B585C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6552BA1D-5695-4178-A4FC-89ABBC7B585C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DD8F79B-1D10-4B54-A6E5-118D1ADC6FD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD8F79B-1D10-4B54-A6E5-118D1ADC6FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD8F79B-1D10-4B54-A6E5-118D1ADC6FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD8F79B-1D10-4B54-A6E5-118D1ADC6FD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
