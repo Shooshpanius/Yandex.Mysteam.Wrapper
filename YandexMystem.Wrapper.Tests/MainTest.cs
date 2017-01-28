@@ -21,10 +21,11 @@ namespace YandexMystem.Wrapper.Tests
         [TestMethod]
         public void GetResultTest()
         {
+            var str = "включи тестовый режим";
             var mst = new Mysteam();
-            mst.GetResult("На столе лежит красное яблоко");
+            var result2 = mst.GetWords(str);
 
-            Assert.IsTrue(true);
+            Assert.IsTrue(result2.Count>0);
         }
     }
 }

@@ -1,6 +1,6 @@
 @echo off
 
-mystem.exe -n -i -g --format json --weight input.txt output.txt
+mystem.exe -ig --format json --weight input.txt output.txt
 
 chcp 65001
 echo.

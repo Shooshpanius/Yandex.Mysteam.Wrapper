@@ -6,8 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using YandexMystem.Wrapper.Enums;
 using YandexMystem.Wrapper.Extensions;
+using YandexMystem.Wrapper.Models;
+using YandexMystem.Wrapper.Models.Mystem;
 
 namespace YandexMystem.Wrapper
 {
@@ -29,12 +32,23 @@ namespace YandexMystem.Wrapper
                 : mystemFilePath;
         }
 
-        public void GetResult(string text, bool leaveTempFile = false)
+        /// <summary>
+        /// Чистый ответ от mysteam
+        /// </summary>
+        /// <param name="text">Строка запроса</param>
+        /// <returns></returns>
+        internal MystemResult GetResult(string text)
         {
-            if(!File.Exists(FilePath))
+            var result = new MystemResult
+            {
+                Request = text
+            };
+
+            if (!File.Exists(FilePath))
                 throw new FileNotFoundException($"{FilePath} not founded");
 
-            var fileInput = "_tmp_mysteam_input.txt";
+            var rootPath = Path.GetDirectoryName(FilePath);
+            var fileInput = Path.Combine(rootPath, "_tmp_mysteam_input.txt");
 
             var p = new Process
             {
@@ -46,20 +60,30 @@ namespace YandexMystem.Wrapper
                     StandardOutputEncoding = Encoding.UTF8,
                     Arguments = 
                         Tools.MystemOptionsTool.GetStringArgs(MystemExecuteOptions.GetGramms | MystemExecuteOptions.GroupGramms | MystemExecuteOptions.ShowWeights)
-                        + Tools.MystemOptionsTool.GetStringArgs(MystemExecuteOptions.UseFormat, "json").Preppend(" ")
-                        + fileInput.Preppend(" ")
+                        + Tools.MystemOptionsTool.GetStringArgs(MystemExecuteOptions.UseFormat, "json").Prepend(" ")
+                        + fileInput.Prepend(" \"").Append("\"")
                 }
             };
 
-            var rootPath = Path.GetDirectoryName(FilePath);
-            File.WriteAllText(Path.Combine(rootPath, fileInput), text, Encoding.UTF8);
+            
+            File.WriteAllText(fileInput, result.Request, Encoding.UTF8);
 
             p.Start();
-            var output = p.StandardOutput.ReadToEnd();
+            result.Response = p.StandardOutput.ReadToEnd();
             p.WaitForExit();
 
-            if (!leaveTempFile)
-                File.Delete(fileInput);
+            File.Delete(fileInput);
+
+            result.Results = JsonConvert.DeserializeObject<MystemWord[]>(result.Response);
+
+            return result;
+        }
+
+        public List<WordModel> GetWords(string text)
+        {
+            return GetResult(text).Results
+                .Select(x => new WordModel(x))
+                .ToList();
         }
     }
 }

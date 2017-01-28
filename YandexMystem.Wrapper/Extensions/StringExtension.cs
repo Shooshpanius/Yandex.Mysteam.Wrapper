@@ -8,7 +8,7 @@ namespace YandexMystem.Wrapper.Extensions
 {
     public static class StringExtension
     {
-        public static string Preppend(this string str, object add, params object[] args)
+        public static string Prepend(this string str, object add, params object[] args)
         {
             return string.Format(add.ToString(), args) + str;
         }

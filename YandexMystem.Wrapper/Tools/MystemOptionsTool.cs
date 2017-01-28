@@ -17,7 +17,7 @@ namespace YandexMystem.Wrapper.Tools
                 if (executeOptions.HasFlag(i))
                     result += " " + GetOptionString(i);
 
-            return result.TrimStart() + appendValue?.Preppend(" ");
+            return result.TrimStart() + appendValue?.Prepend(" ");
         }
 
         private static string GetOptionString(MystemExecuteOptions executeOption)
