@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://yandex.ru/legal/mystem/</licenseUrl>
+    <projectUrl>https://github.com/NickRimmer/Yandex.Mysteam.Wrapper</projectUrl>
+    <iconUrl>https://s19.postimg.org/6a86flbdf/robot_icon_4.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>C# wrapper for Yandex Mystem</description>
+    <releaseNotes>Pre-alfa version. Don't use it.</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>parser yandex mystem wrapper</tags>
+  </metadata>
+</package>
