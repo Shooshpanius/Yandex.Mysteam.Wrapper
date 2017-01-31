@@ -2,4 +2,12 @@
 
 
 # Yandex.Mysteam.Wrapper
-Work still in progress. This code isn't complete, dont use it.
+Библиотека в разработке, используйте на свой страх и риск :Р
+
+## Установка
+
+Установить как [NuGet package](https://www.nuget.org/packages/YandexMystem.Wrapper/):
+
+```powershell
+Install-Package YandexMystem.Wrapper
+```
