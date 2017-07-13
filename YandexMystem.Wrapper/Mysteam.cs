@@ -20,7 +20,7 @@ namespace YandexMystem.Wrapper
     public class Mysteam
     {
         public readonly string FilePath;
-        public readonly string TmpFolder;
+        public readonly string TmpFolder = "tmp";
 
         /// <summary>
         /// 
