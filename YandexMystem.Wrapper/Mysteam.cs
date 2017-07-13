@@ -20,6 +20,7 @@ namespace YandexMystem.Wrapper
     public class Mysteam
     {
         public readonly string FilePath;
+        public readonly string TmpFolder;
 
         /// <summary>
         /// 
@@ -48,7 +49,7 @@ namespace YandexMystem.Wrapper
                 throw new FileNotFoundException($"{FilePath} not founded");
 
             var rootPath = Path.GetDirectoryName(FilePath);
-            var fileInput = Path.Combine(rootPath, "_tmp_mysteam_input.txt");
+            var fileInput = Path.Combine(rootPath, TmpFolder, "_tmp_mysteam_input.txt");
 
             var p = new Process
             {

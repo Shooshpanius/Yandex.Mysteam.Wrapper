@@ -7,7 +7,7 @@
     <authors>$author$</authors>
     <owners>$author$</owners>
     <licenseUrl>https://yandex.ru/legal/mystem/</licenseUrl>
-    <projectUrl>https://github.com/NickRimmer/Yandex.Mysteam.Wrapper</projectUrl>
+    <projectUrl>https://github.com/Shooshpanius/Yandex.Mysteam.Wrapper</projectUrl>
     <iconUrl>https://s19.postimg.org/6a86flbdf/robot_icon_4.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>C# wrapper for Yandex Mystem</description>

@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("YandexMystem.Wrapper")]
 [assembly: AssemblyDescription("Simple wrapper for Yandex mystem software")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("DIPTEAM")]
+[assembly: AssemblyCompany("Shooshpanius & Co")]
 [assembly: AssemblyProduct("YandexMystem.Wrapper")]
-[assembly: AssemblyCopyright("Copyright © DIPTEAM 2017")]
+[assembly: AssemblyCopyright("Copyright © Shooshpanius & Co 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6552ba1d-5695-4178-a4fc-89abbc7b585c")]
+[assembly: Guid("e887128f-e3e2-4c7b-be31-d0b06174a6c8")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.*")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.0.2")]
+[assembly: AssemblyFileVersion("1.0.0.2")]
