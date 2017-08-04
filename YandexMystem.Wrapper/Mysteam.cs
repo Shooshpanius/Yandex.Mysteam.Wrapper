@@ -22,6 +22,8 @@ namespace YandexMystem.Wrapper
         public readonly string FilePath;
         public readonly string TmpFolder = "tmp";
 
+
+
         /// <summary>
         /// 
         /// </summary>
@@ -49,7 +51,9 @@ namespace YandexMystem.Wrapper
                 throw new FileNotFoundException($"{FilePath} not founded");
 
             var rootPath = Path.GetDirectoryName(FilePath);
-            var fileInput = Path.Combine(rootPath, TmpFolder, "_tmp_mysteam_input.txt");
+            Random rnd = new Random();
+            string fileRandomName = rnd.Next(10000, 99999).ToString()+"_tmp_mysteam_input.txt";
+            var fileInput = Path.Combine(rootPath, TmpFolder, fileRandomName);
 
             var p = new Process
             {
