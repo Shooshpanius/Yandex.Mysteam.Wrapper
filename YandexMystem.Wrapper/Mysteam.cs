@@ -51,7 +51,7 @@ namespace YandexMystem.Wrapper
                 throw new FileNotFoundException($"{FilePath} not founded");
 
             var rootPath = Path.GetDirectoryName(FilePath);
-            Random rnd = new Random();
+            Random rnd = new Random(Guid.NewGuid().GetHashCode());
             string fileRandomName = rnd.Next(1000000, 9999999).ToString()+"_tmp_mysteam_input.txt";
             var fileInput = Path.Combine(rootPath, TmpFolder, fileRandomName);
 
