@@ -52,7 +52,7 @@ namespace YandexMystem.Wrapper
 
             var rootPath = Path.GetDirectoryName(FilePath);
             Random rnd = new Random();
-            string fileRandomName = rnd.Next(10000, 99999).ToString()+"_tmp_mysteam_input.txt";
+            string fileRandomName = rnd.Next(1000000, 9999999).ToString()+"_tmp_mysteam_input.txt";
             var fileInput = Path.Combine(rootPath, TmpFolder, fileRandomName);
 
             var p = new Process
